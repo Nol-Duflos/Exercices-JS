@@ -1,0 +1,69 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F1F1F1;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: salmon;
+    margin: 100px auto;
+    position: relative;
+
+    /*On vas utiliser la position absolute dans les enfants de cette box*/
+}
+
+.cont-lignes {
+    width: 60px;
+    height: 42px;
+    /* background-color: teal; */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lignes {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: #000;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.lignes:nth-child(1){
+    top: 0px;
+}
+
+.lignes:nth-child(2){
+    top: 18px;
+}
+
+.lignes:nth-child(3){
+    top: 36px;
+}
+
+/*Quand ces éléments sont collées, ça veut dire que l'encadremet css ne fonctionne que quand l'objet a à la fois la class "btn1" ET la class "active"*/
+.btn1.active .lignes:nth-child(1){
+    top: 18px;
+    transform: rotate(135deg);
+}
+
+.btn1.active .lignes:nth-child(2){
+    opacity: 0;
+    transform: translateX(-20px); /*La propriété translateX vas faire glisser l'élément de gauche à droite
+                                    De droite à gauche pour translatey*/
+}
+
+.btn1.active .lignes:nth-child(3){
+    top: 18px;
+    transform: rotate(-135deg);
+}
