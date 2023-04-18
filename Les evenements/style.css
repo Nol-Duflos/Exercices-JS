@@ -1,0 +1,19 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F1F1F1;
+}
+
+.taille-txt {
+    font-size: 50px;
+    font-style: italic;
+    color: red;
+}
+
+.text-deco {
+    background-color: aqua;
+}
