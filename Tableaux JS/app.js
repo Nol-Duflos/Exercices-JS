@@ -51,3 +51,11 @@ console.log(fruits.join(' ')); //Si je met deux aposthrophes dans les parenthès
 //reverse, cette fonction vas renversé ce qu'il y a dans un tableau
 
 console.log(fruits.reverse());
+
+//UTILISER UNE BOUCLE AVEC DES TABLEAUX
+
+const numTab = [1, 2, 3, 4, 5, 6, 7];
+
+for(let i = 0; i < numTab.length; i++){//On vas itérer jusquà ce que i soit égale à 7, une boucle "for" permet diterer à travers un tableau
+    console.log(numTab[i]); //On vas utiliser i ici sous forme d'index pour récuperer les données du tableau.
+}
