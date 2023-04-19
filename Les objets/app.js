@@ -21,3 +21,6 @@ console.log(Nol.presentation()); //dot notation ; on appel notre objet (Nol) ave
 Nol.passions = ['Cuisine', 'Escalade', 'Sport']; //Ajoute une propriété dans l'objet en respecant l'ordre alphabétique
 
 console.log(Nol.passions[1]); //On peut selectionner une des passions du tableau à partir de l'objet Nol, ici c'est "escalade" qui est log
+
+//!\\ IMPORTANT //!\\ Valeurs primitives vs valeurs de références
+//Il y a une différence fondametale entre les valeurs primitives et de référence
