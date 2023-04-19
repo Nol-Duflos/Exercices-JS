@@ -72,3 +72,38 @@ const chien = {
 
 console.log(chien.nouvelobjet.nouvelnouvelobject.adoptiondate); //comme ça, on a le 3 septembre 2004 qui apparait dans le console.log
 
+//Les tableaux sont des objets
+
+const tableau = ['a', 'b', 'c'];
+
+console.log(typeof 'abc'); //typeof est une valeur à mettre devant dans le console.log pour savoir quel type c'est
+                           //Si je met 'abc' il me rapporte donc string
+                           //Si je met tableau, il me rapporte 'object' car le tableau est un objet
+                           //C'est juste que les tableaux obt certaines caractéristiques différentes 
+console.log(tableau.length); //Par ex la propriété lenght qui nous ermet de voir la longueur du tableau, ici la cnsole affichera 3
+
+
+//Boucles for ..in et for .. of
+
+//for in vas nous êrmettre d'itérer à travers un object, ce qui est très utile.
+
+const voiture = {
+        couleur : 'noir',
+        marque : 'Peugeot',
+        annee : '2007',
+}
+
+for(let props in voiture) {
+        console.log(props, voiture[props]);
+}
+
+console.log(voiture['couleur']);
+//
+
+const fruits = ['fraises', 'cerises', 'framboises'];
+
+for(let fruit of fruits) { //for of est une boucle spécifique aux tableaux
+                           //for in pour les objets, for of pour les tableaux
+        console.log(fruits.indexOf(fruit), fruit);
+
+}
