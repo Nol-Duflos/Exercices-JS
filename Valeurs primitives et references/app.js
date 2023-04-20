@@ -107,3 +107,60 @@ for(let fruit of fruits) { //for of est une boucle spécifique aux tableaux
         console.log(fruits.indexOf(fruit), fruit);
 
 }
+
+//Mot clef "THIS"
+//this est une référence à l'objet qui a appelé une fonction.
+
+const autobus = {
+    couleur  : 'jaune',
+    marque : 'Citrouen',
+    anne : 2004,
+    mafonction : function(){//pour utiliser this, je créer une fonction dans mon objet
+        console.log(this);  //Je vais console.log la référence 'this'
+    }
+}
+
+autobus.mafonction(); //ça nous retourne l'objet en lui-même
+
+//Pour aller plus loin avec le mot clef 'this'
+
+const axolotl = {
+     nom : 'Vorace',
+     proprietaire : 'Alexis Leger',
+     poid : 560,
+     couleur : 'grise',
+     mafonction2 : function(){
+        console.log(this.couleur);
+     }, // <==========================//!\\ IMPORTANT //!\\ ne pas oublier la virgule à la fin d'une fonction quand on en commence une autre
+     mafonctionflechee : () => { //On fait une fonction flechée
+        console.log(this);
+     }
+}
+
+axolotl.mafonction2();       //Les fonctions classiques font référence à l'objet dans laquelle la fonction est créer.
+axolotl.mafonctionflechee(); //Les fonctions flechées font toujours référence à l'objet global.
+
+console.log(this); //this vas tout le temps retourner un objet, l(objet) qui execute la fonction.
+
+function foo(){
+      console.log('Hello my darling seetheart');
+}
+
+foo();
+
+//Methode bind()
+//bind() nous permet de lier le contexte d'un objet avec une fonction
+
+let nvFunction = axolotl.mafonction2.bind(axolotl);
+
+console.log(nvFunction);
+
+nvFunction();
+
+
+
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', axolotl.mafonction2.bind(axolotl));
+
+console.log(btn);
