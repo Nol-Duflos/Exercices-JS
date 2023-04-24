@@ -8,8 +8,11 @@ const promise1 = new Promise((resolve, reject) => { //Promise est un mot clef cr
 
 //O peut utiliser des call back avec resolve et reject
 
-promise1.then((value) => {
+promise1.then((value) => { //Then permet de lancer une mathode après un resolve et qu'on a ben recçu nos
     console.log(value);
+}).catch(() => {
+    console.log("Il y a eu une erreur"); //On s'en sert pour déclarer une erreur, ça permet de ne plus avoir d'erreur sur console.log
+
 })
 
 console.log(promise1);
