@@ -7,7 +7,6 @@
 
 const liste =  document.querySelector('.liste');
 const btn = document.querySelector('.btn');
-
 const xhr = new XMLHttpRequest();
 
 btn.addEventListener('click', () => {
